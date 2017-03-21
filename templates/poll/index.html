@@ -10,9 +10,9 @@
 			<div class ="row">
 				<h1> Welcome Here </h1>
 				<p class ="lead"> Okaaay </p>
-					(% for quest in questions %)
-					<p>{{quest.questions_text}}</p>p>
-					(% endfor %)
+					{% for quest in questions %}
+						<a href ="{% url 'poll:detail' quest.id %}">{{quest.question_text}}</a><br>
+					{% endfor %}
 
 			</div>
 		</div>
