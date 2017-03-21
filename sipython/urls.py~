@@ -3,5 +3,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^poll/', include('poll.urls', name='poll')),
+    url(r'^poll/', include('poll.urls', namespace='poll')),
 ]

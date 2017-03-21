@@ -1,8 +1,25 @@
-<html>
-<body>
-<head>
+{% load staticfiles %}
 
-</head>
-</body>
-<h1> Selamat Belajar Django </h1>
+<html>
+	<head>
+		<title> Pooolllll </title>
+		<link href = "{% static 'css/bootstrap.css' %}" rel="sytlesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class ="row">
+				<h1> Welcome Here </h1>
+				<p class ="lead"> Okaaay </p>
+					(% for quest in questions %)
+					<p>{{quest.questions_text}}</p>p>
+					(% endfor %)
+
+			</div>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   		<script src="js/bootstrap.min.js"></script>
+		<script src = "{% static 'js/bootstrap.js' %}"></script>
+	</body>
 </html>
